@@ -1,0 +1,30 @@
+I have installed odoo from the github platform.
+Normal practice.
+I also added contributors on git on my repo which I created.
+
+I installed the database user on posgres as a superuser 
+$ sudo -s postgres createuser --superuser $(whoami)
+
+I created the  odoo service from teh debian folder
+
+I also created a log file and gave the log file rights with chown
+
+I am getting an error in my logs: import error crop_image does not exist.
+Problem wth the web module in my addons.
+
+I created the odoo.conf file copied from the debian foldr.
+
+i uncommented the line for addons_path and changed the port to 8099 because I have a server running on normal port.
+
+But still having the web error problems.  At this point, I am still troubleshooting.
+
+The odoo-bin downloaded with the odoo files has changed and throwing up errors.
+
+I had to use odoo downloaded from nightly.odoo.com in order for this installation to work.
+
+Odoo is now running on port 8009.
+
+The error I was getting was an image_crop error from odoo.tools.  For some strange reason, 
+the odoo-bin file which came with the git clone could not properly rea the web folder on my addons.
+
+I used the odoo installed from nightly.odoo.com which installs odoo on /usr/bin/odoo.  This worked.  Wrapping my head to find out why.
